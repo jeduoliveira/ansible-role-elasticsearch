@@ -1,7 +1,7 @@
 Elasticearch
 =========
 
-[![Build Status](https://travis-ci.org/jeduoliveira/ansible-role-elasticsearch.svg?branch=master)](https://travis-ci.org/jeduoliveira/ansible-role-elasticsearch) | [![Ansible Role](https://img.shields.io/ansible/role/11572.svg?maxAge=2592000)](https://galaxy.ansible.com/jeduoliveira/elasticsearch/)
+[![Build Status](https://travis-ci.org/jeduoliveira/ansible-role-elasticsearch.svg?branch=master)](https://travis-ci.org/jeduoliveira/ansible-role-elasticsearch) 
 
 Uma ansible role que instala o [ElasticSearch](https://www.elastic.co/products/elasticsearch) para atender o framework [lumisportal](https://lumisxp.lumis.com.br/doc/lumisportal/11.2.0/pt-BR/lumis.installation_and_configuration.system_requirements.html) no RedHat/CentOS.
 
