@@ -13,4 +13,3 @@ elasticsearch_node_name: node-1
 
 elasticsearch_data: /var/lib/elasticsearch
 elasticsearch_logs: /var/log/elasticsearch
-
