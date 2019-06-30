@@ -68,10 +68,9 @@ passed in as parameters) is always nice for users too:
 License
 -------
 
-BSD
+MIT / BSD
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a
-website (HTML is not allowed).
+Está role foi criada em 2019 por [Jorge Eduardo](https://www.linkedin.com/in/jorgeeduardo/).
