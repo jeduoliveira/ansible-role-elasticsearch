@@ -14,10 +14,10 @@
     mode: 0755
     owner: elasticsearch
     group: elasticsearch
-  with_items: 
+  with_items:
     - "{{ elasticsearch_data }}"
     - "{{ elasticsearch_logs }}"
-    
+
 - name: Configure Elasticsearch.
   template:
     src: elasticsearch.yml.j2
