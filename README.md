@@ -56,12 +56,13 @@ Dependencies
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables
-passed in as parameters) is always nice for users too:
+    - hosts: all
+      gather_facts: True
 
-    - hosts: servers
-      roles:
-         - { role: roles/ansible-role-elasticsearch, x: 42 }
+      roles:    
+        - role: ansible-role-elasticsearch
+          elasticsearch_version: 6.2.2
+          elasticsearch_heap: 2g          elasticsearch_logger_action_level: error 
 
 License
 -------
