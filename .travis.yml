@@ -17,7 +17,7 @@ install:
 before_script:
   - cd ../
   - mv ansible-role-$ROLE_NAME jeduoliveira.$ROLE_NAME
-  - cd jeduoliveira.$ROLE_NAMEgeerlingguy.java
+  - cd jeduoliveira.$ROLE_NAME
 
 script:
   - molecule test
