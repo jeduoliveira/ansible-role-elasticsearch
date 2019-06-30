@@ -1,5 +1,8 @@
-Role Name
+Elasticearch
 =========
+
+[![Build Status](https://travis-ci.org/jeduoliveira/ansible-role-elasticsearch.svg?branch=master)](https://travis-ci.org/jeduoliveira/ansible-role-elasticsearch)
+
 
 A brief description of the role goes here.
 
