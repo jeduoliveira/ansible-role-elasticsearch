@@ -62,7 +62,8 @@ Example Playbook
       roles:    
         - role: ansible-role-elasticsearch
           elasticsearch_version: 6.2.2
-          elasticsearch_heap: 2g          elasticsearch_logger_action_level: error 
+          elasticsearch_heap: 2g
+          elasticsearch_logger_action_level: error 
 
 License
 -------
