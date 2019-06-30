@@ -3,25 +3,23 @@ Elasticearch
 
 [![Build Status](https://travis-ci.org/jeduoliveira/ansible-role-elasticsearch.svg?branch=master)](https://travis-ci.org/jeduoliveira/ansible-role-elasticsearch)
 
-
-A brief description of the role goes here.
+Uma ansible role que instala o [ElasticSearch](https://www.elastic.co/products/elasticsearch) para atender o framework [lumisportal](https://lumisxp.lumis.com.br/doc/lumisportal/11.2.0/pt-BR/lumis.installation_and_configuration.system_requirements.html) no RedHat/CentOS.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should
-be mentioned here. For instance, if the role uses the EC2 module, it may be a
-good idea to mention in this section that the boto package is required.
+É necessário JAVA JDK instalado. Veja [jeduoliveira.zulu_openjdk](https://github.com/jeduoliveira/ansible-role-zulu-openjdk) role tem instruções para instalar o Zulu OpenJDK.
+
 
 Role Variables
 --------------
 As variáveis abaixo são listadas como padrão. (Veja defaults/main.yml)
 
-    elasticsearch_version: '6.2.2'
     elasticsearch_package_state: present
-
     elasticsearch_service_state: started
     elasticsearch_service_enabled: true
+
+    elasticsearch_version: 6.2.2
 
     elasticsearch_network_host: 0.0.0.0
     elasticsearch_http_port: 9200
