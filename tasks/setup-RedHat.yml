@@ -2,5 +2,5 @@
 
 - name: install the elasticsearch rpm from a remote repo
   yum:
-    name: https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{{ elasticsearch_version }}.rpm
+    name: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{{ elasticsearch_version }}.rpm"
     state: "{{ elasticsearch_package_state }}"
