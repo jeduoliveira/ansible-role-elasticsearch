@@ -22,6 +22,6 @@ galaxy_info:
     - monitoring
     - logging
     - lucene
-    - elk
-    - efk
     - elasticsearch
+    - lumisportal
+    - lumisxp
