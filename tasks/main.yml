@@ -27,13 +27,24 @@
     mode: 0660
   notify: restart elasticsearch
 
-- name: configure elasticsearch sysconfig.
+- name: configure elasticsearch jvm options.
   lineinfile:
     dest: /etc/elasticsearch/jvm.options
+    regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
     state: present
-  with_items: "{{ elasticsearch_sysconfig }}"
+  with_items: "{{ elasticsearch_jvm }}"
   notify: restart elasticsearch
+
+- name: configure elasticsearch loggin level.
+  lineinfile:
+    dest: /etc/elasticsearch/log4j2.properties
+    regexp: "{{ item.regexp }}"
+    line: "{{ item.line }}"
+    state: present
+  with_items: "{{ elasticsearch_logger_config }}"
+  notify: restart elasticsearch
+
 
 - name: Force a restart if configuration has changed.
   meta: flush_handlers
