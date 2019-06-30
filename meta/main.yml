@@ -3,7 +3,7 @@ dependencies:
   - geerlingguy.java
 
 galaxy_info:
-  role_name: lumisportal_elasticsearch
+  role_name: elasticsearch
   author: jeduoliveira
   description: Elasticsearch for lumisportal in Linux
   company: jeduoliveira
