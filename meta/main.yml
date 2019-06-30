@@ -20,6 +20,6 @@ galaxy_info:
     - elasticsearch
     - lumisportal
     - lumisxp
-    
+
 dependencies:
   - geerlingguy.java
