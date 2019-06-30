@@ -2,7 +2,7 @@
 - name: Converge
   hosts: all
   become: true
-  
+
   roles:
     - role: geerlingguy.java
     - role: jeduoliveira.elasticsearch
