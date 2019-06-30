@@ -1,6 +1,6 @@
 ---
 
-elasticsearch_logger_config: 
+elasticsearch_logger_config:
   - regexp: '^logger.action.level = '
     line: 'logger.action.level = {{ elasticsearch_logger_action_level }}'
 
