@@ -27,6 +27,14 @@
     mode: 0660
   notify: restart elasticsearch
 
+- name: configure elasticsearch sysconfig.
+  lineinfile:
+    dest: /etc/elasticsearch/jvm.options
+    line: "{{ item.line }}"
+    state: present
+  with_items: "{{ elasticsearch_sysconfig }}"
+  notify: restart elasticsearch
+
 - name: Force a restart if configuration has changed.
   meta: flush_handlers
 

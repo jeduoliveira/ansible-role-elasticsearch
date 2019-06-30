@@ -13,3 +13,11 @@ elasticsearch_node_name: node-1
 
 elasticsearch_data: /var/lib/elasticsearch
 elasticsearch_logs: /var/log/elasticsearch
+
+elasticache_heap: 512m
+
+elasticsearch_sysconfig:
+  - regexp: -Xms
+    line: -Xms{{ elasticsearch_heap }}
+  - regexp: -Xmx
+    line: -Xmx{{ elasticsearch_heap }}
