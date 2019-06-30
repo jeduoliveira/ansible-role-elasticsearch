@@ -9,6 +9,7 @@ env:
     - ROLE_NAME: elasticsearch
   matrix:
     - MOLECULE_DISTRO: centos7
+    - MOLECULE_DISTRO: centos6
 
 install:
   - pip install molecule docker
@@ -16,7 +17,7 @@ install:
 before_script:
   - cd ../
   - mv ansible-role-$ROLE_NAME jeduoliveira.$ROLE_NAME
-  - cd jeduoliveira.$ROLE_NAME
+  - cd jeduoliveira.$ROLE_NAMEgeerlingguy.java
 
 script:
   - molecule test
