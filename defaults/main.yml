@@ -1,0 +1,16 @@
+---
+elasticsearch_version: '6.2.2'
+elasticsearch_package_state: present
+
+elasticsearch_service_state: started
+elasticsearch_service_enabled: true
+
+elasticsearch_network_host: 0.0.0.0
+elasticsearch_http_port: 9200
+
+elasticsearch_cluster_name: lumisportal
+elasticsearch_node_name: node-1
+
+elasticsearch_data: /var/lib/elasticsearch
+elasticsearch_logs: /var/log/elasticsearch
+
