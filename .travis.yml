@@ -1,12 +1,15 @@
 ---
 language: python
-python:
+python: 
   - "3.6"
-services: docker
+
+services:
+  - docker
 
 env:
   global:
     - ROLE_NAME: elasticsearch
+    
   matrix:
     - MOLECULE_DISTRO: centos7
 
