@@ -10,6 +10,8 @@ elasticsearch_http_port: 9200
 
 elasticsearch_cluster_name: lumisportal
 elasticsearch_node_name: node-1
+elasticsearch_initial_master_nodes: "['node-1']"
+elasticsearch_discovery_seed_hosts: "['hosts']"
 
 elasticsearch_data: /var/lib/elasticsearch
 elasticsearch_logs: /var/log/elasticsearch
