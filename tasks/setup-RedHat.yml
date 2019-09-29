@@ -5,7 +5,7 @@
     url: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{{ elasticsearch_version }}.rpm"
     dest: "/tmp/elasticsearch.rpm"
     mode: 0440
-  when:  
+  when:
     - elasticsearch_version == '6.2.2'
 
 - name: "download the elasticsearch 7.1.1"
@@ -13,7 +13,7 @@
     url: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{{ elasticsearch_version }}-x86_64.rpm"
     dest: "/tmp/elasticsearch.rpm"
     mode: 0440
-  when: 
+  when:
     - elasticsearch_version == '7.1.1'
 
 - name: "Install elasticsearch"
