@@ -1,22 +1,28 @@
 ---
 
-- name: "download the elasticsearch 6.2.2"
+- name: "download the elasticsearch 6.x"
   get_url:
-    url: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{{ elasticsearch_version }}.rpm"
+    url: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{{ elasticsearch_release }}.rpm"
     dest: "/tmp/elasticsearch.rpm"
     mode: 0440
   when:
-    - elasticsearch_version == '6.2.2'
+    - elasticsearch_version == 6
+  tags:
+    - elasticsearch
 
-- name: "download the elasticsearch 7.1.1"
+- name: "download the elasticsearch 7.x"
   get_url:
-    url: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{{ elasticsearch_version }}-x86_64.rpm"
+    url: "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-{{ elasticsearch_release }}-x86_64.rpm"
     dest: "/tmp/elasticsearch.rpm"
     mode: 0440
   when:
-    - elasticsearch_version == '7.1.1'
+    - elasticsearch_version == 7
+  tags:
+    - elasticsearch
 
 - name: "Install elasticsearch"
   yum:
     name: "/tmp/elasticsearch.rpm"
     state: present
+  tags:
+    - elasticsearch

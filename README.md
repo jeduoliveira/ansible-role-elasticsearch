@@ -33,6 +33,7 @@ As variáveis abaixo são listadas como padrão. (Veja defaults/main.yml)
     elasticsearch_heap: 512m
 
     elasticsearch_logger_action_level: info
+    
 
 As variáveis listadas como vars (veja em vars/main.yml)
 

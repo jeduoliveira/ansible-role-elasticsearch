@@ -1,5 +1,6 @@
 ---
-elasticsearch_version: 6.2.2
+elasticsearch_version: 6
+elasticsearch_release: 6.2.2
 elasticsearch_package_state: present
 
 elasticsearch_service_state: started
@@ -21,3 +22,8 @@ elasticsearch_logs: /var/log/elasticsearch
 elasticsearch_heap: 512m
 
 elasticsearch_logger_action_level: info
+
+elasticsearch_java_home: "{{ java_home }}"
+
+
+elasticsearch_extra_config:
