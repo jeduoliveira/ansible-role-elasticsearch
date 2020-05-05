@@ -11,4 +11,4 @@
 
   roles:
     - role: jeduoliveira.zulu_openjdk
-    - role: ansible-role-elasticsearch
+    - role: jeduoliveira.elasticsearch
