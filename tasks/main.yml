@@ -30,7 +30,7 @@
     dest: /etc/elasticsearch/elasticsearch.yml
     owner: root
     group: elasticsearch
-    mode: 0755
+    mode: 0660
   notify: restart elasticsearch
   tags:
     - elasticsearch
@@ -56,6 +56,19 @@
   notify: restart elasticsearch
   tags:
     - elasticsearch
+
+- name: Set limits.conf
+  pam_limits:
+    domain: elasticsearch
+    limit_type: "-"
+    limit_item: nofile
+    value: "65535"
+
+- name: Set virtual memory
+  sysctl:
+    name: vm.max_map_count
+    value: '262144'
+    state: present
 
 - name: Force a restart if configuration has changed.
   meta: flush_handlers
@@ -84,7 +97,7 @@
     src: java_home.sh.j2
     dest: /etc/profile.d/java_home.sh
     mode: 0755
-  when: elasticsearch_java_home is defined and elasticsearch_java_home
+  when: java_home is defined and java_home
   notify: restart elasticsearch
   tags:
     - elasticsearch

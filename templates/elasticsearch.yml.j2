@@ -90,7 +90,7 @@ http.port: {{ elasticsearch_http_port }}
 
 action.auto_create_index: "-lumisportal-*,+*"
 
-{% if elasticsearch_release == '7.1.1' %}
+{% if elasticsearch_release == "7.1.1" %}
 discovery.seed_hosts: {{ elasticsearch_discovery_seed_hosts  }}
 cluster.initial_master_nodes: {{ elasticsearch_initial_master_nodes }}
 search.max_open_scroll_context: 100000
