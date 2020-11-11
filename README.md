@@ -37,10 +37,6 @@ As variáveis abaixo são listadas como padrão. (Veja defaults/main.yml)
 
 As variáveis listadas como vars (veja em vars/main.yml)
 
-    elasticsearch_logger_config:
-      - regexp: '^logger.action.level = '
-        line: 'logger.action.level = {{ elasticsearch_logger_action_level }}'
-
     elasticsearch_jvm:
       - regexp: '^-Xms'
         line: -Xms{{ elasticsearch_heap }}

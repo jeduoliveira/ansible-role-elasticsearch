@@ -46,17 +46,6 @@
   tags:
     - elasticsearch
 
-- name: configure elasticsearch loggin level.
-  lineinfile:
-    dest: /etc/elasticsearch/log4j2.properties
-    regexp: "{{ item.regexp }}"
-    line: "{{ item.line }}"
-    state: present
-  with_items: "{{ elasticsearch_logger_config }}"
-  notify: restart elasticsearch
-  tags:
-    - elasticsearch
-
 - name: Set limits.conf
   pam_limits:
     domain: elasticsearch
